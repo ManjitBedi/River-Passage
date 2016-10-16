@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MainViewController: UIViewController {
 
+    var audioPlayer:AVAudioPlayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,10 +31,24 @@ class MainViewController: UIViewController {
     
     
     @IBAction func playAction(_ sender: AnyObject) {
+        if let myAudioUrl = Bundle.main.url(forResource: "RPVoiceMusic", withExtension: "m4a") {
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: myAudioUrl)
+                audioPlayer?.prepareToPlay()
+                audioPlayer?.play()
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }
     }
     
     
     @IBAction func pauseAction(_ sender: AnyObject) {
+        if (audioPlayer?.isPlaying)! {
+            audioPlayer?.pause()
+        } else {
+            audioPlayer?.play()
+        }
     }
     
     

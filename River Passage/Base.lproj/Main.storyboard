@@ -336,7 +336,6 @@ by Jeff Phelps</string>
                             <constraint firstItem="eb8-JV-oAz" firstAttribute="top" secondItem="Lgq-im-TmN" secondAttribute="bottom" constant="8" id="2NC-S2-OeJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="i0s-wi-lFv" secondAttribute="trailing" constant="90" id="8ob-x8-eXI"/>
                             <constraint firstItem="i0s-wi-lFv" firstAttribute="leading" secondItem="HNZ-ZQ-JXF" secondAttribute="trailing" constant="83" id="Cfu-y2-Vn4"/>
-                            <constraint firstItem="HNZ-ZQ-JXF" firstAttribute="leading" secondItem="deO-vt-iQb" secondAttribute="leadingMargin" constant="82" id="LRI-g1-pDH"/>
                             <constraint firstItem="eb8-JV-oAz" firstAttribute="centerX" secondItem="deO-vt-iQb" secondAttribute="centerX" id="MdZ-7u-RlD"/>
                             <constraint firstItem="i0s-wi-lFv" firstAttribute="top" secondItem="nny-XJ-9xS" secondAttribute="bottom" constant="38" id="ORd-Gx-13k"/>
                             <constraint firstItem="LmQ-pA-fxR" firstAttribute="top" secondItem="HNZ-ZQ-JXF" secondAttribute="bottom" constant="17" id="QCs-9E-5HP"/>
