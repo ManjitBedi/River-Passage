@@ -392,12 +392,13 @@ biographies</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="jeffphelps" translatesAutoresizingMaskIntoConstraints="NO" id="P9r-Sz-rp0"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="jeffphelps" translatesAutoresizingMaskIntoConstraints="NO" id="P9r-Sz-rp0">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="0oY-vl-Cce"/>
+                                </constraints>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03a-vK-uWz">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="269" id="AiC-Rg-heV"/>
-                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Jeff Phelps’s stories and poetry have been widely published, notably in ">
                                         <attributes>
@@ -683,15 +684,15 @@ Cg
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="vMB-zW-wAS" firstAttribute="centerX" secondItem="gAZ-4w-9Q4" secondAttribute="centerX" id="17C-vp-qpv"/>
-                            <constraint firstItem="LAn-dB-hth" firstAttribute="top" secondItem="03a-vK-uWz" secondAttribute="bottom" constant="25" id="7nX-Ax-hN3"/>
-                            <constraint firstItem="03a-vK-uWz" firstAttribute="top" secondItem="P9r-Sz-rp0" secondAttribute="bottom" constant="19" id="CbU-kc-aSY"/>
-                            <constraint firstItem="03a-vK-uWz" firstAttribute="leading" secondItem="gAZ-4w-9Q4" secondAttribute="leadingMargin" id="FJB-7E-L88"/>
-                            <constraint firstItem="03a-vK-uWz" firstAttribute="centerX" secondItem="P9r-Sz-rp0" secondAttribute="centerX" id="J8M-Q1-DO3"/>
+                            <constraint firstItem="03a-vK-uWz" firstAttribute="leading" secondItem="gAZ-4w-9Q4" secondAttribute="leadingMargin" id="B0K-jP-hiZ"/>
                             <constraint firstItem="P9r-Sz-rp0" firstAttribute="centerX" secondItem="vMB-zW-wAS" secondAttribute="centerX" id="KWD-PW-ipo"/>
                             <constraint firstItem="vMB-zW-wAS" firstAttribute="top" secondItem="SxN-9L-BZw" secondAttribute="bottom" constant="8" id="T0a-89-a6J"/>
                             <constraint firstItem="P9r-Sz-rp0" firstAttribute="top" secondItem="vMB-zW-wAS" secondAttribute="bottom" constant="24" id="X7r-6U-K0C"/>
+                            <constraint firstItem="03a-vK-uWz" firstAttribute="bottom" secondItem="LAn-dB-hth" secondAttribute="top" id="auC-iK-8GS"/>
                             <constraint firstItem="P9r-Sz-rp0" firstAttribute="leading" secondItem="gAZ-4w-9Q4" secondAttribute="leadingMargin" constant="86" id="k1Z-dW-uFm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="P9r-Sz-rp0" secondAttribute="trailing" constant="86" id="kX9-u5-PU9"/>
+                            <constraint firstItem="03a-vK-uWz" firstAttribute="top" secondItem="P9r-Sz-rp0" secondAttribute="bottom" constant="14" id="l37-Ca-fzh"/>
+                            <constraint firstAttribute="trailing" secondItem="03a-vK-uWz" secondAttribute="trailing" id="rtq-Ik-kZF"/>
                         </constraints>
                     </view>
                 </viewController>
