@@ -12,6 +12,30 @@ import AVFoundation
 class MainViewController: UIViewController {
 
     var audioPlayer:AVAudioPlayer?
+    var isDisplayingBio = false
+    var isDisplayingCredits = false
+    @IBOutlet weak var playAudio: UIButton!
+    
+    @IBOutlet weak var pause: UIButton!
+
+    @IBOutlet weak var containerView: UIView!
+    
+    lazy var bioViewController: BioViewController = {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        var viewController = storyboard.instantiateViewController(withIdentifier: "bioView") as! BioViewController
+        self.addViewControllerAsChildViewController(viewController: viewController)
+        
+        return viewController
+    }()
+    
+
+    lazy var creditsViewController: CreditsViewController = {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        var viewController = storyboard.instantiateViewController(withIdentifier: "creditsView") as! CreditsViewController
+        self.addViewControllerAsChildViewController(viewController: viewController)
+        
+        return viewController
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +48,19 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var playAudio: UIButton!
-
-    @IBOutlet weak var pause: UIButton!
+    private func addViewControllerAsChildViewController(viewController: UIViewController) {
+        addChildViewController(viewController)
+        view.addSubview(viewController.view)
+        viewController.view.frame = containerView.bounds
+        viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        viewController.didMove(toParentViewController: self)
+    }
     
+    private func removeViewControllerAsChildViewController(viewController: UIViewController) {
+        viewController.willMove(toParentViewController: nil)
+        viewController.view.removeFromSuperview()
+        viewController.removeFromParentViewController()
+    }
     
     
     @IBAction func playAction(_ sender: AnyObject) {
@@ -51,17 +84,36 @@ class MainViewController: UIViewController {
         }
     }
     
-    
     @IBAction func displayPoem(_ sender: AnyObject) {
+        self.containerView.isHidden = true
+        
+        if (isDisplayingCredits) {
+            isDisplayingCredits = false
+            removeViewControllerAsChildViewController(viewController: creditsViewController)
+        } else if (isDisplayingBio) {
+            isDisplayingBio = false
+            removeViewControllerAsChildViewController(viewController: bioViewController)
+        }
     }
-    
-    
     
     @IBAction func displayBio(_ sender: AnyObject) {
+        containerView.isHidden = false;
+        isDisplayingBio = true
+        if (isDisplayingCredits) {
+            isDisplayingCredits = false
+            removeViewControllerAsChildViewController(viewController: creditsViewController)
+        }
+        addViewControllerAsChildViewController(viewController: self.bioViewController)
     }
     
-    
     @IBAction func displayCredits(_ sender: AnyObject) {
+        self.containerView.isHidden = false;
+        if (isDisplayingBio) {
+            isDisplayingBio = false
+            removeViewControllerAsChildViewController(viewController: bioViewController)
+        }
+
+        self.addViewControllerAsChildViewController(viewController: self.creditsViewController)
     }
     
     /*
