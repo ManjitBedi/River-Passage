@@ -14,6 +14,10 @@ class MainViewController: UIViewController {
     var audioPlayer:AVAudioPlayer?
     var isDisplayingBio = false
     var isDisplayingCredits = false
+    
+    
+    @IBOutlet weak var poemTextView: UITextView!
+    
     @IBOutlet weak var playAudio: UIButton!
     
     @IBOutlet weak var pause: UIButton!
@@ -40,7 +44,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.poemTextView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
     }
 
     override func didReceiveMemoryWarning() {
@@ -112,7 +116,7 @@ class MainViewController: UIViewController {
             isDisplayingBio = false
             removeViewControllerAsChildViewController(viewController: bioViewController)
         }
-
+        isDisplayingCredits = true
         self.addViewControllerAsChildViewController(viewController: self.creditsViewController)
     }
     

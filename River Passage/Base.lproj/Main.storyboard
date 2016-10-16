@@ -297,7 +297,7 @@ fleetingly as a dragonfly on a river.
 Old Beddow, feeling a chill from the open window,
 puts on his jacket,
 blows chalk dust from his sleeve.</mutableString>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eb8-JV-oAz">
@@ -358,6 +358,7 @@ by Jeff Phelps</string>
                         <outlet property="containerView" destination="bsx-ZN-Z4Y" id="YeM-ib-Fv2"/>
                         <outlet property="pause" destination="i0s-wi-lFv" id="zfR-of-8zY"/>
                         <outlet property="playAudio" destination="HNZ-ZQ-JXF" id="sXk-Tk-DX9"/>
+                        <outlet property="poemTextView" destination="nny-XJ-9xS" id="Rve-jM-c7C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YtV-k4-PJz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1837,7 +1838,12 @@ Cg
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="grant_jpeg_black" translatesAutoresizingMaskIntoConstraints="NO" id="0f5-nY-Wia"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="grant_jpeg_black" translatesAutoresizingMaskIntoConstraints="NO" id="0f5-nY-Wia">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="0Nq-uv-h86"/>
+                                    <constraint firstAttribute="height" constant="111" id="aIS-nT-OX4"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music by Dan Phelps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pP2-Be-gju">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -1865,13 +1871,13 @@ credits</string>
                             <constraint firstItem="pP2-Be-gju" firstAttribute="leading" secondItem="FBw-yl-AHU" secondAttribute="leadingMargin" constant="21" id="5lU-gs-qAp"/>
                             <constraint firstItem="pP2-Be-gju" firstAttribute="top" secondItem="zuq-2E-u7Q" secondAttribute="bottom" constant="10" id="8bu-uh-fD9"/>
                             <constraint firstItem="zuq-2E-u7Q" firstAttribute="top" secondItem="FBw-yl-AHU" secondAttribute="top" constant="97" id="AZK-CR-WmU"/>
+                            <constraint firstItem="elI-rm-hvT" firstAttribute="top" secondItem="0f5-nY-Wia" secondAttribute="bottom" constant="40" id="BK0-MA-Xot"/>
                             <constraint firstItem="0f5-nY-Wia" firstAttribute="top" secondItem="6C9-jx-TtV" secondAttribute="bottom" constant="496" id="D7p-O9-Xcb"/>
                             <constraint firstItem="0f5-nY-Wia" firstAttribute="centerX" secondItem="FBw-yl-AHU" secondAttribute="centerX" id="cl4-VD-67J"/>
-                            <constraint firstItem="fdd-8R-KaT" firstAttribute="leading" secondItem="FBw-yl-AHU" secondAttribute="leadingMargin" constant="90" id="fBM-Fn-bUI"/>
                             <constraint firstItem="zuq-2E-u7Q" firstAttribute="top" secondItem="fdd-8R-KaT" secondAttribute="bottom" constant="26" id="lZn-DG-GVw"/>
-                            <constraint firstItem="fdd-8R-KaT" firstAttribute="top" secondItem="6C9-jx-TtV" secondAttribute="bottom" constant="8" symbolic="YES" id="rvj-Sg-eKF"/>
                             <constraint firstItem="0f5-nY-Wia" firstAttribute="leading" secondItem="FBw-yl-AHU" secondAttribute="leadingMargin" constant="21" id="s9S-M3-RQe"/>
                             <constraint firstItem="zuq-2E-u7Q" firstAttribute="leading" secondItem="pP2-Be-gju" secondAttribute="leading" id="taw-gh-CTd"/>
+                            <constraint firstItem="fdd-8R-KaT" firstAttribute="centerX" secondItem="FBw-yl-AHU" secondAttribute="centerX" constant="-11" id="tlu-NC-iGg"/>
                         </constraints>
                     </view>
                 </viewController>
