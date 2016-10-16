@@ -1,108 +1,363 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A319" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cn4-ZC-sEQ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
-        <scene sceneID="hNz-n2-bh7">
+        <!--Main View Controller-->
+        <scene sceneID="LL4-bo-d2c">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cn4-ZC-sEQ" customClass="MainViewController" customModule="River_Passage" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
-                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                        <viewControllerLayoutGuide type="top" id="Lgq-im-TmN"/>
+                        <viewControllerLayoutGuide type="bottom" id="J69-SW-bSY"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                    <view key="view" contentMode="scaleToFill" id="deO-vt-iQb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="LmQ-pA-fxR">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTM-Ns-6cL">
+                                        <state key="normal" title="Poem"/>
+                                        <connections>
+                                            <action selector="displayPoem:" destination="cn4-ZC-sEQ" eventType="touchUpInside" id="YLs-Bt-6jw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncL-yl-ENV">
+                                        <state key="normal" title="Bio"/>
+                                        <connections>
+                                            <action selector="displayBio:" destination="cn4-ZC-sEQ" eventType="touchUpInside" id="dHg-vH-mCY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyP-vL-R8C">
+                                        <state key="normal" title="Credits"/>
+                                        <connections>
+                                            <action selector="displayCredits:" destination="cn4-ZC-sEQ" eventType="touchUpInside" id="yDx-ow-jKc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nny-XJ-9xS">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">In the classroom
+old Beddow punches dots on the board
+with a snap of chalk-end, a crumbling of dust on the wood block floor.
+He punctuates the word
+eye-sos-alees
+with dots for emphasis
+and on the third drills the board
+with finger nails to make the class wince.
+At least some signs of humanity, he thinks – 
+make them show they are alive.
+
+Outside it rains.
+Mizzle.  Fine Clee Hill rain
+lining up on the fascia
+like school kids.  Dot to dot,
+blown before its time onto the window
+which mists and thaws and runnels
+into lines, not parallel,
+but merging, beyond the logic
+of any geometry.
+
+Dave is in the school yard –
+left last year as soon as he could
+after exams, but still feels a distant
+sense of belonging.  He rides a mountain bike
+with ten Shimano gears,
+understands poetry as a hand
+untangling rabbits from the ferret net, 
+the taut, frightened look of a leveret.
+And now he cycles emptily
+through dry and wet and dry,
+under the shelter, through patchy puddles,
+half seeing tyre lines
+merge and separate on the tarmac,
+half hearing the zizz of water on rubber, 
+the screek of brake blocks in the wet,
+thinks passingly of a job driving Massey Combines
+and has already forgotten Beddow’s lessons,
+their fading, sad symmetries.
+
+Dave is too early for his younger brother,
+who sits at the back of Beddow’s class,
+too early for the bell,
+only halfway through maths,
+the lesson’s dozing nadir.
+Passing across the yard
+the young PE man tells him to clear off, 
+to go to the Job Centre if he has nothing better
+and Dave registers blue tracksuit, new Reeboks, 
+not suited to the damp,
+the rising of moisture like up a drain.
+
+He skids his bike as he retreats,
+sassily outside the gym, standing on the pedals,
+the shimmy of rear wheel not unlike
+the distant tail-wag of a Spitfire
+over Tern Hill or Stanmore
+signalling to those on the ground
+its safe return.
+
+In boredom more than anger
+Dave lobs a block of rubber down the bank
+forgetting the road is there below.
+The block arcs, a low but perfect parabola
+to land in nests of dock, campion, 
+young unformed dandelion, harebell and blackberry,
+a whole nation of wild flowers on the by-pass bank,
+and rolls on squarely, bouncing
+on to the road.
+
+From his driver’s seat 
+Jonathon sees the tumbling block first,
+the kid second, in silhouette
+at the bank top, turning handlebars
+as if to escape.
+Jonathon brakes but the rubber dings,
+reverberates under the wheel arch
+and flies behind and he breathes
+‘bloody kids’, watches in the mirror
+as the rubber dances, takes life in the road,
+rolls and comes to rest in the gutter.
+
+Driving over the by-pass bridge
+Jonathon glimpses a hump of a town,
+piled on a cliff and copper-topped;
+looks at the river which is spring-height,
+glistening like a snail-trail,
+punctuated with green umbrellas
+like cabbages.
+
+Upstream is a tree
+where cormorants, black as dead leaves sit,
+circle, then dip for fish.  On damp days like these
+they are a mirage, fish stealers, 
+returning to their tree to preen,
+bills under oily feathers, learning to live
+a hundred miles from home,
+unwelcome as Black Country bikers on a Sunday.
+
+Jonathon sits under his green sky,
+the pattering canvas of a fishing umbrella,
+watches the river spit drops
+and casts his line upstream.
+The silence, the concentration is what he loves,
+the nylon angle, the dip of fluorescent float;
+that and the strike,
+the timing of which no maths can predict,
+when the carp closes its mouth
+and comprehends, suddenly, a new element
+with which it was always connected 
+in a perfect straight line.
+You learn to avoid cormorants,
+the scavenging incomers.
+You wait instead for the electric blue
+of kingfisher,
+a drenching of moorhens,
+a squabble of ducks.
+Jonathon reels in
+to let a canoeist pass,
+to avoid lines becoming snagged.
+They nod in mutual, resigned acceptance
+of one another’s right to be there
+of their different perspectives of the river.
+
+Richard dips the paddle, 
+heaves water behind him.
+Helmet, canoe, lifejacket, spraydeck;
+how many families of moorhens he has dispossessed,
+water voles forced by his bow wave
+into upper chambers.
+He times the strokes like an Oxford cox,
+thinks of his arms, his stomach muscles,
+of the return trip, which will be harder –
+the Jackfield rapids, the pubs, the bridges,
+the caravan parks, all mopped up
+by the swing and strike of one arm over the other,
+the dip and dive as sure as an otter
+that gives him the feel, the knowledge that,
+eye-level with swans
+he has a right to be here.
+His glasses sweat with spray
+as he trails one paddle;
+a watery skid and the Bridgnorth bridge
+comes into sight, buttresses
+jammed with logs and the spring’s drift.
+Beyond the bridge
+Richard pulls in to clear his vision.
+Impossible in such a wet place;
+nothing to wipe spectacles on.
+He clutches an overhanging branch of hawthorn
+and breathes on a lens.
+
+Suddenly he is swept round by the current,
+feels the stern go and the glasses slip through his fingers.
+He reaches for them, tries to catch,
+like catching fish with your hands.
+They bounce on his fingertips, slip from the deck
+and he has reached too far.
+He always goes too far, he thinks,
+as he topples, loses it.  With a shoulder
+he smacks green water, breathes filthy bubbles.
+Now upside down, Richard thinks he sees the glasses 
+shimmer up through floating green galaxies,
+like spots you get before your eyes,
+dislocated particles of retina.
+He could almost touch them even now,
+but for the different geometry of underwater
+where there’s no time to breathe,
+where everything moves
+in slow motion.
+Richard remembers the drill;
+is surprised that, even here,
+instinct snaps into place.  He tries 
+to paddle himself upright
+but something traps him,
+is stronger than paddles,
+than the desperate torque of shoulder muscles – 
+he recognises it as the clutch of a branch or, worse, 
+the unexpected, concentric gravity
+of a whirlpool.
+
+One night, two years ago,
+a lad went in upstream from here.
+The river has the body now, never found,
+the town riddled with underwater mazes,
+carved sandstone gullies
+with entrances, no exits,
+two hundred miles of water keeping him in place,
+feeling his pockets for identity,
+searching the hair.
+The boy lives under water,
+bone love to the sandstone,
+all the money out of his pockets,
+credit cards gone, washed away.
+He crouches under a thousand years of sandstone
+like a foetus in decaying denim,
+stone washed by the river.
+
+Before he turns
+Richard, inverted, afraid to breathe, 
+looks him in the eye.
+
+Then he is righted, paddles, splashes,
+gasps.  He never knew how precious air could be.  
+What he would have given for air, then.
+Green water slides off the deck
+and he opens his eyes
+as if for the first time ever,
+to reeds and willows and smell of water,
+the sound of traffic on the by-pass
+and the sun, water sliding past it.
+
+Richard persuades himself 
+this encounter was an aberration,
+a desperate imagination playing tricks.
+But for old Beddow the splash the boy made
+still thumps in his ears two years later.
+It was he who heard it that night
+as he walked Meg, his springer.
+The dog stopped at the sound.
+This is how he described it to his wife
+afterwards, trembling a little,
+unable to drink the brandy,
+and the dog asleep in front of the gas fire.
+It’s how he remembers it still,
+wishing he could have done something,
+but knowing it had slipped,
+the moment, through his fingers.
+He told a policewoman the same –
+a splash, some distance away,
+heavy like a bag of potatoes
+then nothing.  Nothing.
+
+Sometimes in the night he wakes even now
+thinking he has heard it, or else the echo of it.
+Or it’s the lights of the police helicopter
+he has dreamed of, sweeping the river;
+how he stood and watched 
+while Meg sniffed for rabbits, 
+as it kept coming back
+to where water rippled darkly.
+You could have drawn a line between the places it stopped,
+as if there was some connection between the spots of light.
+
+Now old Beddow joins dots with a new chalk
+chosen from the blackboard trough
+as if white on black will make them understand
+this ancient Greek mapping –
+still as true today as then.
+A thought of helicopters crosses his mind
+fleetingly as a dragonfly on a river.
+Old Beddow, feeling a chill from the open window,
+puts on his jacket,
+blows chalk dust from his sleeve.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eb8-JV-oAz">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="141" id="CJP-RR-6s9"/>
+                                    <constraint firstAttribute="height" constant="43" id="psq-0J-9Dm"/>
+                                </constraints>
+                                <string key="text">River Passage
+by Jeff Phelps</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0s-wi-lFv">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="pxr-ki-kDY"/>
+                                    <constraint firstAttribute="height" constant="30" id="w1f-Ns-WUG"/>
+                                </constraints>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="pauseAction:" destination="cn4-ZC-sEQ" eventType="touchUpInside" id="Sba-ks-USW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNZ-ZQ-JXF">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KW4-gR-OiR"/>
+                                    <constraint firstAttribute="width" constant="46" id="RQe-nR-Pc8"/>
+                                </constraints>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playAction:" destination="cn4-ZC-sEQ" eventType="touchUpInside" id="HmD-ZP-bm3"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstItem="eb8-JV-oAz" firstAttribute="top" secondItem="Lgq-im-TmN" secondAttribute="bottom" constant="8" id="2NC-S2-OeJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="i0s-wi-lFv" secondAttribute="trailing" constant="90" id="8ob-x8-eXI"/>
+                            <constraint firstItem="i0s-wi-lFv" firstAttribute="leading" secondItem="HNZ-ZQ-JXF" secondAttribute="trailing" constant="83" id="Cfu-y2-Vn4"/>
+                            <constraint firstItem="HNZ-ZQ-JXF" firstAttribute="leading" secondItem="deO-vt-iQb" secondAttribute="leadingMargin" constant="82" id="LRI-g1-pDH"/>
+                            <constraint firstItem="eb8-JV-oAz" firstAttribute="centerX" secondItem="deO-vt-iQb" secondAttribute="centerX" id="MdZ-7u-RlD"/>
+                            <constraint firstItem="i0s-wi-lFv" firstAttribute="top" secondItem="nny-XJ-9xS" secondAttribute="bottom" constant="38" id="ORd-Gx-13k"/>
+                            <constraint firstItem="LmQ-pA-fxR" firstAttribute="top" secondItem="HNZ-ZQ-JXF" secondAttribute="bottom" constant="17" id="QCs-9E-5HP"/>
+                            <constraint firstItem="i0s-wi-lFv" firstAttribute="leading" secondItem="HNZ-ZQ-JXF" secondAttribute="trailing" constant="83" id="Wxm-rZ-PAI"/>
+                            <constraint firstAttribute="trailing" secondItem="nny-XJ-9xS" secondAttribute="trailing" id="bVA-sk-S2B"/>
+                            <constraint firstItem="nny-XJ-9xS" firstAttribute="top" secondItem="Lgq-im-TmN" secondAttribute="bottom" constant="49" id="gg6-vL-g9C"/>
+                            <constraint firstItem="J69-SW-bSY" firstAttribute="top" secondItem="LmQ-pA-fxR" secondAttribute="bottom" id="hKk-h3-7G7"/>
+                            <constraint firstItem="LmQ-pA-fxR" firstAttribute="top" secondItem="i0s-wi-lFv" secondAttribute="bottom" constant="17" id="ivd-zd-aUa"/>
+                            <constraint firstItem="LmQ-pA-fxR" firstAttribute="leading" secondItem="deO-vt-iQb" secondAttribute="leading" id="mjH-eE-JX3"/>
+                            <constraint firstItem="nny-XJ-9xS" firstAttribute="leading" secondItem="deO-vt-iQb" secondAttribute="leading" id="qCF-ch-6PB"/>
+                            <constraint firstAttribute="trailing" secondItem="LmQ-pA-fxR" secondAttribute="trailing" id="qHT-Cq-1xx"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
-        </scene>
-        <!--Second-->
-        <scene sceneID="wg7-f3-ORb">
-            <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
-                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="750" y="360"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="yl2-sM-qoP">
-            <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
-                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <outlet property="pause" destination="i0s-wi-lFv" id="zfR-of-8zY"/>
+                        <outlet property="playAudio" destination="HNZ-ZQ-JXF" id="sXk-Tk-DX9"/>
                     </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YtV-k4-PJz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="144.80000000000001" y="196.55172413793105"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
-    </resources>
 </document>
