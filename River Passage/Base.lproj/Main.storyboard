@@ -396,7 +396,7 @@ biographies</string>
                                     <constraint firstAttribute="height" constant="200" id="0oY-vl-Cce"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03a-vK-uWz">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="03a-vK-uWz">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Jeff Phelps’s stories and poetry have been widely published, notably in ">
@@ -782,6 +782,9 @@ http://www.phelpsmusic.com</mutableString>
                             <constraint firstAttribute="trailing" secondItem="03a-vK-uWz" secondAttribute="trailing" id="rtq-Ik-kZF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="biographyTextView" destination="03a-vK-uWz" id="QPk-yz-0U1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gW8-SB-rOA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
