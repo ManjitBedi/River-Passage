@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, AVAudioPlayerDelegate {
 
     var audioPlayer:AVAudioPlayer?
     var isDisplayingBio = false
@@ -135,4 +135,8 @@ class MainViewController: UIViewController {
     }
     */
 
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool){
+        audioPlayer?.currentTime = 0
+    }
 }
