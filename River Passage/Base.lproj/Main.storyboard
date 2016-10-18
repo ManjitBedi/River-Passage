@@ -18,7 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsx-ZN-Z4Y"/>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nny-XJ-9xS">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">In the classroom
@@ -289,6 +288,7 @@ by Jeff Phelps</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <containerView hidden="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsx-ZN-Z4Y"/>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="LmQ-pA-fxR" userLabel="buttons">
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTM-Ns-6cL">
@@ -311,30 +311,29 @@ by Jeff Phelps</string>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uba-vp-iLE" userLabel="playback">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="uba-vp-iLE" userLabel="playback">
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNZ-ZQ-JXF">
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNZ-ZQ-JXF">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="KW4-gR-OiR"/>
+                                            <constraint firstAttribute="width" constant="40" id="J5q-Hv-mFA"/>
                                         </constraints>
-                                        <state key="normal" title="Play"/>
+                                        <state key="normal" backgroundImage="playButton"/>
                                         <connections>
                                             <action selector="playAction:" destination="cn4-ZC-sEQ" eventType="touchUpInside" id="HmD-ZP-bm3"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0s-wi-lFv">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0s-wi-lFv">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="w1f-Ns-WUG"/>
+                                            <constraint firstAttribute="width" constant="40" id="R8A-5G-ZWr"/>
                                         </constraints>
-                                        <state key="normal" title="Pause"/>
+                                        <state key="normal" backgroundImage="pauseButton"/>
                                         <connections>
                                             <action selector="pauseAction:" destination="cn4-ZC-sEQ" eventType="touchUpInside" id="Sba-ks-USW"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="ad6-ZX-EqK"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="fqi-Br-txK"/>
+                                    <constraint firstAttribute="height" constant="40" id="aiI-bw-kOP"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -347,12 +346,12 @@ by Jeff Phelps</string>
                             <constraint firstItem="nny-XJ-9xS" firstAttribute="leading" secondItem="deO-vt-iQb" secondAttribute="leadingMargin" id="OGa-hW-Dso"/>
                             <constraint firstItem="bsx-ZN-Z4Y" firstAttribute="leading" secondItem="deO-vt-iQb" secondAttribute="leading" id="ZBF-8v-6U3"/>
                             <constraint firstItem="eb8-JV-oAz" firstAttribute="centerX" secondItem="deO-vt-iQb" secondAttribute="centerX" id="cZz-A9-lTX"/>
-                            <constraint firstItem="uba-vp-iLE" firstAttribute="top" secondItem="nny-XJ-9xS" secondAttribute="bottom" constant="36" id="e30-sC-3QM"/>
-                            <constraint firstItem="uba-vp-iLE" firstAttribute="top" secondItem="bsx-ZN-Z4Y" secondAttribute="bottom" constant="36" id="eL2-xk-UgH"/>
+                            <constraint firstItem="uba-vp-iLE" firstAttribute="top" secondItem="nny-XJ-9xS" secondAttribute="bottom" constant="31" id="e30-sC-3QM"/>
+                            <constraint firstItem="uba-vp-iLE" firstAttribute="top" secondItem="bsx-ZN-Z4Y" secondAttribute="bottom" constant="31" id="eL2-xk-UgH"/>
                             <constraint firstItem="LmQ-pA-fxR" firstAttribute="top" secondItem="uba-vp-iLE" secondAttribute="bottom" constant="19" id="hao-Tt-OGr"/>
                             <constraint firstAttribute="trailing" secondItem="LmQ-pA-fxR" secondAttribute="trailing" id="kq2-Nz-wGf"/>
                             <constraint firstItem="eb8-JV-oAz" firstAttribute="top" secondItem="Lgq-im-TmN" secondAttribute="bottom" constant="8" id="lzA-pr-GvO"/>
-                            <constraint firstItem="nny-XJ-9xS" firstAttribute="top" secondItem="Lgq-im-TmN" secondAttribute="bottom" constant="49" id="ndh-eQ-wMD"/>
+                            <constraint firstItem="nny-XJ-9xS" firstAttribute="top" secondItem="Lgq-im-TmN" secondAttribute="bottom" constant="54" id="ndh-eQ-wMD"/>
                             <constraint firstItem="LmQ-pA-fxR" firstAttribute="leading" secondItem="deO-vt-iQb" secondAttribute="leading" id="qwJ-R5-pAb"/>
                             <constraint firstItem="J69-SW-bSY" firstAttribute="top" secondItem="LmQ-pA-fxR" secondAttribute="bottom" id="u6N-28-HYZ"/>
                             <constraint firstAttribute="trailing" secondItem="bsx-ZN-Z4Y" secondAttribute="trailing" id="w2X-In-KF0"/>
@@ -403,8 +402,9 @@ biographies</string>
                                     <fragment content="Jeff Phelps’s stories and poetry have been widely published, notably in ">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Roman"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Roman"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -412,8 +412,9 @@ biographies</string>
                                     <fragment content="London Magazine">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Italic"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Italic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -421,8 +422,9 @@ biographies</string>
                                     <fragment content=" and in ">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Roman"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Roman"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -430,8 +432,9 @@ biographies</string>
                                     <fragment content="Critical Quarterly">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Italic"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Italic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -439,8 +442,9 @@ biographies</string>
                                     <fragment content=". In 1991 he was overall winner of the Mail on Sunday Novel Competition. Fay Weldon described his story as ‘">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Roman"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Roman"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -448,8 +452,9 @@ biographies</string>
                                     <fragment content="an intensely attractive piece of writing">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Italic"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Italic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -459,8 +464,9 @@ biographies</string>
 In 2000 he won second prize in the </string>
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Roman"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Roman"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -468,8 +474,9 @@ In 2000 he won second prize in the </string>
                                     <fragment content="Stand">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Italic"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Italic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -477,8 +484,9 @@ In 2000 he won second prize in the </string>
                                     <fragment content=" Open Poetry Competition with his poem, ">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Roman"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Roman"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -486,8 +494,9 @@ In 2000 he won second prize in the </string>
                                     <fragment content="River Passage">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Italic"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Italic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -497,8 +506,9 @@ In 2000 he won second prize in the </string>
 His first novel, </string>
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Roman"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Roman"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -506,8 +516,9 @@ His first novel, </string>
                                     <fragment content="Painter Man">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Italic"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Italic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -515,8 +526,9 @@ His first novel, </string>
                                     <fragment content=", described by Booker shortlisted novelist Clare Morrall as ‘">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Roman"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Roman"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -524,8 +536,9 @@ His first novel, </string>
                                     <fragment content="intelligent and impressive">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Italic"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Italic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -533,8 +546,9 @@ His first novel, </string>
                                     <fragment content="’, was published in May 2005. His second, ">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Roman"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Roman"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -542,8 +556,9 @@ His first novel, </string>
                                     <fragment content="Box of Tricks ">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Italic"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Italic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -551,8 +566,9 @@ His first novel, </string>
                                     <fragment content="with its ‘">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Roman"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Roman"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -560,8 +576,9 @@ His first novel, </string>
                                     <fragment content="Seaside theatricals in all their seedy, flamboyant, tawdry, extravagant, innocent and heartbreaking glory">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Italic"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Italic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -569,8 +586,9 @@ His first novel, </string>
                                     <fragment content="’ (Robert Edric) came out in July 2009. ">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Roman"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Roman"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -578,8 +596,9 @@ His first novel, </string>
                                     <fragment content="Shropshire Review">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Italic"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Italic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -587,8 +606,9 @@ His first novel, </string>
                                     <fragment content=" commended its ‘">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Roman"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Roman"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -597,8 +617,9 @@ His first novel, </string>
                                         <string key="content">Chekhovian ability to create an internal world where the lives of everyday people are as important and compelling as those of the heroes, the captains and the kings</string>
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Italic"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Italic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -608,8 +629,9 @@ His first novel, </string>
 His play S</string>
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Roman"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Roman"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -617,8 +639,9 @@ His play S</string>
                                     <fragment content="ea View">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Italic"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Italic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -627,8 +650,9 @@ His play S</string>
                                         <string key="content">, co-written with Nick Daws, was staged in Stellenbosch, South Africa in January 2010.  For  two years from 1988 – 1990 he was co-editor with the poet Roger Pearson of the literary magazine, </string>
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Roman"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Roman"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -636,8 +660,9 @@ His play S</string>
                                     <fragment content="Nutshell">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Italic"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Italic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -647,8 +672,9 @@ His play S</string>
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Roman"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Roman"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="15" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
@@ -659,26 +685,87 @@ His play S</string>
 http://jeffphelps.co.uk</string>
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Times-Roman"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="Times-Roman"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
                                         <string key="content" base64-UTF8="YES">
-Cg
+CgoKA
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="10" name="TimesNewRomanPSMT"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                             <real key="NSKern" value="0.0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
                                     </fragment>
+                                    <fragment>
+                                        <mutableString key="content">Dan Phelps is a composer, pianist and music tutor based in Llantwit Fardre near Pontypridd, South Wales. Dan has a Post Graduate Diploma in Composition from the Royal Welsh College of Music and Drama as well as a BA (Hons) Degree in Music from Bath Spa University College. 
+
+Dan has extensive experience as a solo pianist and keyboard player and has performed extensively throughout the UK. As well as his own solo piano recitals he provides music for care homes, weddings, corporate events and functions.  He also works with vocalist Jayne Sarah providing an acoustic set of Jazz, Blues and original arrangements of classic songs. Performance highlights include, as a solo pianist, performing at St David's Hall as part of the Welsh proms and at St Donat's Arts centre.  
+
+Past performance credits include being the keyboard player for 2 Rude (a ska tribute band), New Jersey (a Bon Jovi tribute band), performing with the Con Brio Samba band, and playing as part of a vocal and piano duo providing an acoustic set of an extensive mix of music.
+
+ Dan is a prize winning composer whose music has been played all over the country.  He has produced music for a number of professional organisations and individuals including Rubicon Dance, India Dance Wales, Elan Wales (a theatre company) and Calon TV (an animation company) amongst others.  His chamber compositions have been performed by ensembles such as the Gjylaci Duo, Ensemble Cymru and Altitude (Philip Heyman (of Welsh National Opera) and Zoe Smith). One of his works was performed at the Powys Hall at the University of Wales, Bangor, by Harvey Davies (piano) and Heather Bills (cello) as part of the Bangor Music Festival.  Dan has also worked with librettist Simon Rees of Welsh National Opera and continues to work very closely with two poets, Jeff Phelps and Simon Fletcher, on a collaboration project Severn Spirit.
+
+Dan was also a member and an associate composer of the Cardiff New Music Collective for several years, specialising in performing contemporary music to new audiences.
+
+http://www.phelpsmusic.com</mutableString>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="28">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="56">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="84">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="112">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="140">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="168">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="196">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="224">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="252">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="280">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="308">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="336">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -763,5 +850,7 @@ credits</string>
     <resources>
         <image name="grant_jpeg_black" width="1871" height="591"/>
         <image name="jeffphelps" width="427" height="640"/>
+        <image name="pauseButton" width="53" height="52"/>
+        <image name="playButton" width="53" height="52"/>
     </resources>
 </document>

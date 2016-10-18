@@ -54,7 +54,7 @@ class MainViewController: UIViewController {
     
     private func addViewControllerAsChildViewController(viewController: UIViewController) {
         addChildViewController(viewController)
-        view.addSubview(viewController.view)
+        containerView.addSubview(viewController.view)
         viewController.view.frame = containerView.bounds
         viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         viewController.didMove(toParentViewController: self)
@@ -66,19 +66,24 @@ class MainViewController: UIViewController {
         viewController.removeFromParentViewController()
     }
     
-    
     @IBAction func playAction(_ sender: AnyObject) {
-        if let myAudioUrl = Bundle.main.url(forResource: "RPVoiceMusic", withExtension: "m4a") {
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOf: myAudioUrl)
-                audioPlayer?.prepareToPlay()
-                audioPlayer?.play()
-            } catch let error as NSError {
-                print(error.localizedDescription)
+        
+        if let audioPlayer = audioPlayer {
+            if (!audioPlayer.isPlaying) {
+                audioPlayer.play()
+            }
+        } else {
+            if let myAudioUrl = Bundle.main.url(forResource: "RPVoiceMusic", withExtension: "m4a") {
+                do {
+                    audioPlayer = try AVAudioPlayer(contentsOf: myAudioUrl)
+                    audioPlayer?.prepareToPlay()
+                    audioPlayer?.play()
+                } catch let error as NSError {
+                    print(error.localizedDescription)
+                }
             }
         }
     }
-    
     
     @IBAction func pauseAction(_ sender: AnyObject) {
         if (audioPlayer?.isPlaying)! {
@@ -102,11 +107,11 @@ class MainViewController: UIViewController {
     
     @IBAction func displayBio(_ sender: AnyObject) {
         containerView.isHidden = false;
-        isDisplayingBio = true
         if (isDisplayingCredits) {
             isDisplayingCredits = false
             removeViewControllerAsChildViewController(viewController: creditsViewController)
         }
+        isDisplayingBio = true
         addViewControllerAsChildViewController(viewController: self.bioViewController)
     }
     
