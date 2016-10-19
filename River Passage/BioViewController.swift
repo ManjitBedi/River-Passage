@@ -14,7 +14,6 @@ class BioViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        biographyTextView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
     }
     
     override func viewDidLayoutSubviews() {

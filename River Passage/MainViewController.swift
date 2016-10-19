@@ -44,9 +44,18 @@ class MainViewController: UIViewController, AVAudioPlayerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.poemTextView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
+        // increase the font size for the iPad.
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            poemTextView.font = UIFont.systemFont(ofSize: 20)
+        }
+        
+        poemTextView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
     }
 
+    override func viewDidLayoutSubviews() {
+        poemTextView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
