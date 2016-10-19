@@ -324,6 +324,7 @@
 				78486E641DB3ED4700AB9485 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
