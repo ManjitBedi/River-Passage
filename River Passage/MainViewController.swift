@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, AVAudioPlayerDelegate {
 
     var audioPlayer:AVAudioPlayer?
     var isDisplayingBio = false
@@ -44,9 +44,18 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.poemTextView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
+        // increase the font size for the iPad.
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            poemTextView.font = UIFont.systemFont(ofSize: 20)
+        }
+        
+        poemTextView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
     }
 
+    override func viewDidLayoutSubviews() {
+        poemTextView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -54,7 +63,7 @@ class MainViewController: UIViewController {
     
     private func addViewControllerAsChildViewController(viewController: UIViewController) {
         addChildViewController(viewController)
-        view.addSubview(viewController.view)
+        containerView.addSubview(viewController.view)
         viewController.view.frame = containerView.bounds
         viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         viewController.didMove(toParentViewController: self)
@@ -66,19 +75,24 @@ class MainViewController: UIViewController {
         viewController.removeFromParentViewController()
     }
     
-    
     @IBAction func playAction(_ sender: AnyObject) {
-        if let myAudioUrl = Bundle.main.url(forResource: "RPVoiceMusic", withExtension: "m4a") {
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOf: myAudioUrl)
-                audioPlayer?.prepareToPlay()
-                audioPlayer?.play()
-            } catch let error as NSError {
-                print(error.localizedDescription)
+        
+        if let audioPlayer = audioPlayer {
+            if (!audioPlayer.isPlaying) {
+                audioPlayer.play()
+            }
+        } else {
+            if let myAudioUrl = Bundle.main.url(forResource: "RPVoiceMusic", withExtension: "m4a") {
+                do {
+                    audioPlayer = try AVAudioPlayer(contentsOf: myAudioUrl)
+                    audioPlayer?.prepareToPlay()
+                    audioPlayer?.play()
+                } catch let error as NSError {
+                    print(error.localizedDescription)
+                }
             }
         }
     }
-    
     
     @IBAction func pauseAction(_ sender: AnyObject) {
         if (audioPlayer?.isPlaying)! {
@@ -102,11 +116,11 @@ class MainViewController: UIViewController {
     
     @IBAction func displayBio(_ sender: AnyObject) {
         containerView.isHidden = false;
-        isDisplayingBio = true
         if (isDisplayingCredits) {
             isDisplayingCredits = false
             removeViewControllerAsChildViewController(viewController: creditsViewController)
         }
+        isDisplayingBio = true
         addViewControllerAsChildViewController(viewController: self.bioViewController)
     }
     
@@ -130,4 +144,8 @@ class MainViewController: UIViewController {
     }
     */
 
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool){
+        audioPlayer?.currentTime = 0
+    }
 }
